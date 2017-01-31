@@ -66,4 +66,4 @@ INSERT INTO PRESC VALUES(6, 50, 1);
 INSERT INTO LOGINS VALUES('gabriel', 'petry');
 INSERT INTO LOGINS VALUES('oystein', 'hovind');
 
-commit;
+COMMIT;
