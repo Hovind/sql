@@ -15,15 +15,6 @@
 #include <stdlib.h>
 #include <string.h>			// inclue pour strchr()
  
-int nettoyer(char *chaine)
-{
-    char *cc;
-    for (cc = chaine; *cc != '\0'; cc++) {
-        *chaine = *cc;
-        if (*chaine != garbage) cc++;
-    }
-    *dst = '\0';
-}
 int lire(char *chaine, int longueur)
 {
     char *positionEntree = NULL;
