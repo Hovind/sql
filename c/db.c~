@@ -23,10 +23,11 @@ void nettoyer(char *chaine, char c) // élimine le caractère c dans la string don
 	char *src;
 	for (src = chaine; *src != '\0'; src++) {
 		if (*src != c) {
-            		*chaine++ = *src;
+            		chaine++ = *src;
 		}
 	}
 	*chaine = '\0';
+	return 0;
 }
 
 char lirechar()
@@ -160,6 +161,7 @@ int main( int argc, char *argv[] )
 	char supplier[100];
 	size_t size;
 	int val; // indique si la validation a été completée
+	char control; // indique si l'utilisateur veut reesayer de s'autentiquer 
 	char secure; // indique si l'utilisateur veut activer la securité
 
 	printf("Activer la securite [y/n] ? ");

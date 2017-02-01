@@ -20,7 +20,7 @@ int nettoyer(char *chaine, char poubelle)
     char *src;
     for (src = chaine; *src != '\0'; src++) {
         if (*src != poubelle) {
-            chaine++ = *src;
+            *chaine++ = *src;
         }
     }
     *chaine = '\0';

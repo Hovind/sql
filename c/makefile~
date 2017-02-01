@@ -2,9 +2,9 @@ CC=cc
 CFLAGS=-Wall
 LDFLAGS=-locilib
 
-OBJECTS=db.c
+OBJECTS=testdb.c
 
-TARGET=db
+TARGET=testdb
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $@ $(LDFLAGS)
