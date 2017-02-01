@@ -9,13 +9,17 @@ ORDER BY nom_med ASC;
 PROMPT Question 2:;
 SELECT distinct nom_med
 FROM MED, ACHAT, FOURN
-WHERE MED.id_med = ACHAT.id_med AND FOURN.id_fourn = ACHAT.id_fourn AND FOURN.nom_fourn = 'Alpha';
+WHERE MED.id_med = ACHAT.id_med
+AND FOURN.id_fourn = ACHAT.id_fourn
+AND FOURN.nom_fourn = 'Alpha';
 
 -- Q3
 PROMPT Question 3:;
 SELECT id_achat, nom_med, date_achat
 FROM MED, ACHAT, FOURN
-WHERE MED.id_med = ACHAT.id_med AND FOURN.id_fourn = ACHAT.id_fourn AND FOURN.nom_fourn = 'Beta'
+WHERE MED.id_med = ACHAT.id_med
+AND FOURN.id_fourn = ACHAT.id_fourn
+AND FOURN.nom_fourn = 'Beta'
 ORDER BY date_achat ASC;
 
 -- Q4
