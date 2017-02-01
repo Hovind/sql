@@ -19,7 +19,6 @@
 
 void nettoyer(char *chaine, char c) // élimine le caractère c dans la string donnée
 {
-	char *cc = chaine;
 	char *src;
 	for (src = chaine; *src != '\0'; src++) {
 		if (*src != c) {
@@ -147,7 +146,7 @@ int executeQuery(char* query, OCI_Connection* cn) {
 
 int main( int argc, char *argv[] )
 {
-	char* supplier_query[2] = { "SELECT distinct nom_med FROM MED, ACHAT, FOURN WHERE MED.id_med = ACHAT.id_med AND FOURN.id_fourn = ACHAT.id_fourn AND FOURN.nom_fourn = '",
+	char* supplier_query[2] = { "SELECT distinct nom_med, type_med FROM MED, ACHAT, FOURN WHERE MED.id_med = ACHAT.id_med AND FOURN.id_fourn = ACHAT.id_fourn AND FOURN.nom_fourn = '",
 				    "'" };	// requête à executer
 	char* login_query[3] = { "select * from logins where login = '",
 				 "' and password = '",
